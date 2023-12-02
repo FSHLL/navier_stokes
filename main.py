@@ -24,7 +24,7 @@ Y0 = np.ones_like(functions_v)
 X0, Y0 = newton_raphson.eval_with_inv(X0, Y0, functions_u, jacobian_u, functions_v, jacobian_v)
 
 # Newton_raphson method with conjugate gradient
-# newton_raphson.eval_with_alg(X0, Y0, functions_u, jacobian_u, functions_v, jacobian_v, k_max=0)
+# X0, Y0 = newton_raphson.eval_with_alg(X0, Y0, functions_u, jacobian_u, functions_v, jacobian_v, k_max=0)
 
 index = 0
 for i in range(1, len(matrix_u)-1):

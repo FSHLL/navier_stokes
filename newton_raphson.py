@@ -27,6 +27,7 @@ def eval_with_alg(X0, Y0, functions_u, jacobian_u, functions_v, jacobian_v, tol=
         print(error_y)
         print('---------------------')
         k = k + 1
+    return X0, Y0
 
 def eval_with_inv(X0, Y0, functions_u, jacobian_u, functions_v, jacobian_v, tol=1e-6, k_max=100):
     k=0
