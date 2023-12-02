@@ -18,4 +18,5 @@ Simulación numérica de flujo incompresible utilizando las ecuaciones de Navier
 ```bash
   pip install numpy
   pip install sympy
+  pip install matplotlib
 ```
