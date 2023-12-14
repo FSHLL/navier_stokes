@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import matrix_maker
 import functions_maker
 import newton_raphson
+import interpolation
 
 matrix_u, matrix_v = matrix_maker.create_matrix(9, 9)
 
@@ -32,6 +33,11 @@ for i in range(1, len(matrix_u)-1):
         if matrix_u[i][j] != 0:
             matrix_u[i][j] = X0[index]
             index = index+1
+
+p = interpolation.create_df_polynomial(matrix_u)
+
+print(p(1, 3))
+matrix_u = interpolation.apply_interpolation_2(matrix_u, p, 10)
 
 plt.imshow(matrix_u)
 plt.title( "2-D Heat Map" )
